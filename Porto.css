@@ -3,11 +3,11 @@
 /* ========== ROOT VARIABLES (URBAN MINIMALIST) ========== */
 :root {
   --bg-light: #f5f5f5;
-  --bg-dark: #1A1F5C;
+  --bg-dark: #1a1f5c;
   --accent: #e5e0a3;
   --text-dark: #f5f5f5;
   --text-light: #f5f5f5;
-  --sidebar-bg: #0B0F3B;
+  --sidebar-bg: #0b0f3b;
   --card-bg: #283f6f;
   --navbar-bg: transparent;
   --hover-bg: #3b4e7a;
@@ -175,6 +175,7 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
+  background: transparent;
 }
 .profile li {
   padding: 1rem;
@@ -381,8 +382,8 @@ body {
 .card-contain {
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  margin: 1%;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  padding: 1%;
   background: transparent;
   gap: 1rem;
 }
@@ -417,6 +418,85 @@ body {
   font-size: 1rem;
   font-weight: 700;
 }
+
+.project-background {
+  background-color: var(--bg-dark);
+  padding: 2em 0;
+  overflow: hidden;
+}
+.project-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  margin-bottom: 5%;
+  margin-left: 20em;
+}
+.project-contain h2 {
+  padding-bottom: 0.5rem;
+  width: 2em;
+  margin-left: 1em;
+  border-bottom: var(--accent) 5px solid;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 2em;
+}
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  margin-bottom: 5%;
+  margin-left: 20em;
+}
+
+.project-item p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  background: transparent;
+}
+
+ .project-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+ }
+
+ .project-img img {
+  width: 100%;
+  padding-bottom: 1em;
+  border-radius: 8px;
+ }
+.project-item ul {
+  list-style: none;
+  text-decoration-line: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: transparent;
+}
+.project-item li {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+}
+.project-item a {
+   text-decoration: none;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+} 
+
+.project-item li:hover {
+  background-color: var(--hover-bg);
+}
+
+
+
 
 /* ========== MEDIA QUERY UNTUK TABLET (max-width: 800px) ========== */
 @media screen and (max-width: 800px) {
@@ -571,6 +651,34 @@ body {
   }
   .text-grid p {
     text-align: center;
+  }
+
+  .text-card {
+    font-size: 0.9rem;
+  }
+
+  .project-item {
+    margin-left: 1em;
+    width: 100%;
+  }
+  .project-item p {
+    font-size: 0.9rem;
+  }
+
+  .project-contain {
+    margin: 0 1em;
+  }
+  .project-contain h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .project-img img {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 1em;
   }
 }
 
@@ -756,6 +864,30 @@ body {
   .menu a {
     font-size: 1rem;
   }
+
+  .project-contain {
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .project-item {
+    margin-left: 22em;
+  }
+
+  .project-item p {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .project-img {
+    width: 90%;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -783,5 +915,45 @@ body {
   }
   .menu a {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 4000px) {
+  .text-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-img img {
+    margin-bottom: 1rem;
+  }
+  .profile h2 {
+    font-size: 1rem;
+  }
+  .profile h4 {
+    font-size: 0.75rem;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .project-contain {
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .project-item {
+    margin-left: 22em;
+  }
+
+  .project-item p {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .project-img {
+    width: 90%;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
