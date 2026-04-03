@@ -90,7 +90,7 @@ body {
 /* Hamburger menu */
 .hamburger-menu {
   display: none;
-  color: var(--text-dark);
+  color: var(--accent);
   background: transparent;
   font-size: 1.6em;
   margin-top: 0.6em;
@@ -99,7 +99,7 @@ body {
   transition: color 0.3s ease;
 }
 .hamburger-menu:hover {
-  color: var(--accent);
+  color: var(--hover-bg);
 }
 
 /* ========== SIDEBAR (DESKTOP) ========== */
@@ -518,7 +518,7 @@ body {
     z-index: 1100;
   }
   .hamburger-menu i {
-    color: var(--text-dark);
+    color: var(--accent);
     font-size: 1.6rem;
     background: transparent;
     padding: 4px;
