@@ -262,7 +262,8 @@ body {
   justify-content: center;
   align-items: start;
   padding: 1em 2em;
-  height: 70vh;
+  object-fit: cover;
+  height: 100vh;
   width: 100%;
   box-shadow: var(--text-dark) 0px 5px 15px;
   background: url(OIP\ \(1\).webp) no-repeat center center/cover;
@@ -508,7 +509,12 @@ body {
   .nav-links {
     display: none;
   }
-
+ 
+  .main{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
   .hamburger-menu {
     display: block;
     position: fixed;
